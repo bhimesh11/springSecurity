@@ -1,0 +1,34 @@
+imagine that you have authentocvation server so multiple applications want to acess these servers or resources
+
+ios
+andriod app
+web app
+
+
+
+everything is cooked in web token
+
+Json web token
+fast
+stateless
+
+negitives
+
+compromised secret key
+no visibility to logged in users
+token can be stolen
+
+
+when multiple application acess workung
+
+
+3 tyoe s
+1 header
+algorith and type
+
+2 payload
+
+3.verify signatiure
+
+apche 2.0 li
+

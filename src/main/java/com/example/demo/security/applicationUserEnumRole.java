@@ -10,7 +10,7 @@ public enum applicationUserEnumRole
 {
 STUDENT(Sets.newHashSet(applicationUserPermissions.STUDENT_READ,applicationUserPermissions.STUDENT_WRITE,applicationUserPermissions.COURSE_READ)),
     ADMIN(Sets.newHashSet(applicationUserPermissions.STUDENT_READ,applicationUserPermissions.STUDENT_WRITE,applicationUserPermissions.COURSE_WRITE,applicationUserPermissions.COURSE_READ)),
-    AdMINTRAINEE(Sets.newHashSet(applicationUserPermissions.COURSE_READ,applicationUserPermissions.STUDENT_READ));
+    ADMINTRAINEE(Sets.newHashSet(applicationUserPermissions.COURSE_READ,applicationUserPermissions.STUDENT_READ));
 
 
 private final Set<applicationUserPermissions> permissions;
@@ -31,7 +31,7 @@ private final Set<applicationUserPermissions> permissions;
                         .map(permission -> new SimpleGrantedAuthority(permission.getPermission()))
                         .collect(Collectors.toSet());
 
-        permissions.add(new SimpleGrantedAuthority("ROLE" + this.name()));
+        permissions.add(new SimpleGrantedAuthority("ROLE_" + this.name()));
 
         return permissions;
 
